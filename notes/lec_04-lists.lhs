@@ -194,7 +194,7 @@ and also works for `tail`:
 
 > tail' :: [a] -> [a]
 > tail' (_:xs) = xs
-> tailOnes = tail' ones == ones -- => True
+> tailOnes = tail' ones -- => 1 : ones
 
 we can compute the length of a list w/ pattern matching:
 
