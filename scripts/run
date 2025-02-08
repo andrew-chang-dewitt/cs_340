@@ -1,0 +1,8 @@
+#/user/bin/env bash
+
+SCRIPT_DIR=`dirname $(realpath "$0")`
+cd $SCRIPT_DIR/..
+
+file="$1"
+
+ghc --run $file

@@ -1,0 +1,11 @@
+#/user/bin/env bash
+
+SCRIPT_DIR=`dirname $(realpath "$0")`
+cd $SCRIPT_DIR/..
+
+file="$2"
+cmd="$SCRIPT_DIR/$1 $file"
+
+echo "running $cmd on changes...\n\n"
+echo "$file" | entr $cmd
+echo "\n\n...stopping watching"
