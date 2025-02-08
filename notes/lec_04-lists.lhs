@@ -5,6 +5,33 @@
 lists
 =====
 
+haskell has a built in list type, which (using haskell type notation) can be
+defined as:
+
+                 [t] = [] | t : [t]
+                 ^   ^ ^  ^ ^ ^ ^
+  a list of `t`s |   | |  | | | | any list of `t`s
+  ----------------   | | OR | | ------------------
+         is equal to | |    | | _cons_ with
+         ------------- |    | -------------
+         an empty list |    | any `t`
+         ---------------    ---------
+
+  where,
+
+    `:` (the _cons_, or _construct_) operator, used to prepend a value (LHS) to
+        the front of a list (RHS):
+          a : [b, c, d] => [a, b, c, d]
+
+we can use this cons operator to construct lists:
+
+> l1 :: [Int]
+> l1 = 3 : []
+> l2 :: [ [Int] ]
+> l2 = (3 : []) : []
+> l3 :: [ [Int] ]
+> l3 = (4 : (3 : [])) : (( 3 : [] ): [])
+
 
 infinite lists
 --------------
