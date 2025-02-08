@@ -3,6 +3,7 @@ import qualified Distribution.Simple.Utils as aside
 import qualified Distribution.Simple.Utils as aside
 import Distribution.Simple.Command (helpCommandUI)
 import Language.Haskell.TH (clause)
+
 Functions
 ===
 
